@@ -58,8 +58,33 @@ body {
   width: 100%;
   padding: 1.5rem 0;
   font-size: 1.8rem;
-  outline: 0;
+  /* outline: 0; */
   color: #fff;
+}
+
+.form-control input:focus,
+.form-control input:valid {
+  outline: 0;
+  border-bottom-color: var(--link-color);
+}
+
+.form-control label {
+  position: absolute;
+  left: 0;
+  top: 1.7rem;
+}
+
+.form-control label span {
+  display: inline-block;
+  font-size: 1.8rem;
+  min-width: 5px;
+  transition: 0.3s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+}
+
+.form-control input:focus + label span,
+.form-control input:valid + label span {
+  color: var(--link-color);
+  transform: translateY(-30px);
 }
 
 .btn {
